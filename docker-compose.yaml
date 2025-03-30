@@ -1,0 +1,18 @@
+#Real-world analogy:
+#Think of the container as a building with its own address system (port 80)
+#The port mapping (3000:80) is like setting up a mail forwarding service
+#When someone sends mail to your PO Box (port 3000), it automatically gets delivered to your apartment (port 80)
+#So when you run your application:
+#Nginx serves your React app on port 80 inside the container
+#Docker maps this to port 3000 on your computer
+#You can access your app by visiting http://localhost:3000 in your browser
+
+name: todobedo
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:80' # LOCAL PORT (the port that you will access your app on) : CONTAINER PORT (the port that NGINX will run on)
