@@ -1,0 +1,7 @@
+name: todobedo
+
+services:
+  app:
+    image: ishnoopy/todobedo:latest
+    ports: 
+      - 8000:80 # port 8000 on the server will be forwarded to port 80 on the container which is exposed default in nginx and 8000 is in the proxy
