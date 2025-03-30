@@ -23,7 +23,7 @@ export default function Todo() {
 	const [newTodo, setNewTodo] = useState("");
 
 	// Color mode values for light/dark theme
-	const bgColor = useColorModeValue("white", "gray.800");
+	const bgColor = useColorModeValue("white", "gray.900");
 	const borderColor = useColorModeValue("gray.200", "gray.600");
 
 	const handleAddTodo = () => {
